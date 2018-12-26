@@ -6,6 +6,7 @@
 #include "AlglormIntroSlution.h"
 #include "AlglormIntroSlutionDlg.h"
 #include "afxdialogex.h"
+#include "InsertSort.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -64,6 +65,7 @@ BEGIN_MESSAGE_MAP(CAlglormIntroSlutionDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON1, &CAlglormIntroSlutionDlg::OnBnClickedInsertSort)
 END_MESSAGE_MAP()
 
 
@@ -152,3 +154,14 @@ HCURSOR CAlglormIntroSlutionDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CAlglormIntroSlutionDlg::OnBnClickedInsertSort()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	std::vector<int> vecSortArray = {1,5,677,88,990,77,55,44,34,67,89,0,7,54,55,33,4,567,88,88};
+	CInsertSort::InsertSort2(vecSortArray);
+	CInsertSort::InsertSort2(vecSortArray);
+
+	int ii = 0;
+}
